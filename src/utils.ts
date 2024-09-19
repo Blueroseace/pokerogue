@@ -266,10 +266,10 @@ export function executeIf<T>(condition: boolean, promiseFunc: () => Promise<T>):
 
 export const sessionIdKey = "pokerogue_sessionId";
 // Check if the current hostname is 'localhost' or an IP address, and ensure a port is specified
-export const isLocal = (
-  (window.location.hostname === "localhost" ||
+export const isLocal = true;
+(window.location.hostname === "localhost" ||
    /^[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+$/.test(window.location.hostname)) &&
-  window.location.port !== "") || window.location.hostname === "";
+  window.location.port !== "",  window.location.hostname === "";
 
 export const localServerUrl = import.meta.env.VITE_SERVER_URL ?? `http://${window.location.hostname}:${window.location.port+1}`;
 
@@ -324,7 +324,7 @@ export function localPing() {
   if (isLocal) {
     apiFetch("game/titlestats")
       .then(resolved => isLocalServerConnected = true,
-        rejected => isLocalServerConnected = false
+        rejected => isLocalServerConnected = true
       );
   }
 }
