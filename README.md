@@ -1,6 +1,6 @@
-<picture><img src="./public/images/logo.png" width="300" alt="PokéRogue"></picture>
-
 NOTE THIS IS AN OFFLINE FORK WITH THE OPTIONS OF IMPORTING AND EXPORTING DATA ENABLED YW
+
+<picture><img src="./public/images/logo.png" width="300" alt="PokéRogue"></picture>
 
 PokéRogue is a browser based Pokémon fangame heavily inspired by the roguelite genre. Battle endlessly while gathering stacking items, exploring many different biomes, fighting trainers, bosses, and more!
 
